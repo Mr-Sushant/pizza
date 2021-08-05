@@ -43,6 +43,56 @@
       .topnav .icon {
         display: none;
       }
+
+      #cart-section{
+        display: block;
+        color: black;
+        
+      }
+      #headin{
+        color: white;
+        font-size: 30px;
+        
+      }
+
+      #cart{
+        
+        width: 40%;
+        margin-top: 100px;
+        text-align: center;
+        padding: 5px;
+        font-size: 21px;
+        border-radius: 10px;
+        background: rgba(167, 167, 167, 0.897);
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #cart button{
+        margin: 2px;
+        height: 30px;
+        width: 80px;
+        color: black;
+        font-size: medium;
+        font-weight: bold;
+        border-radius: 12px;
+        border: 2px rgba(255, 255, 255, 0.411) SOLID;
+        background-color: rgba(189, 189, 189, 0.596);
+      }
+
+      #total{
+        color: black;
+        width: 40%;
+        margin-top: 20px;
+        text-align: center;
+        padding: 5px;
+        font-size: 40px;
+        border-radius: 10px;
+        background-color: rgba(189, 189, 189, 0.596);
+        margin-left: auto;
+        margin-right: auto;
+      }
+
     </style>
   </head>
   <body onload="getitems()">
@@ -59,8 +109,8 @@
         </a>
       </div>
     </header>
-    <div>
-      <p>cart items</p>
+    <div id="cart-section">
+      <p id="headin">Cart Items</p>
       <div id="cart"></div>
     </div>
     <div>
