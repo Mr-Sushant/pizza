@@ -26,16 +26,20 @@ function additem(item, price) {
   console.log(localStorage.cart)
 }
 var total = 0
+
+
 function getitems() {
   var parent = document.getElementById('cart')
   console.log(parent)
   items = JSON.parse(localStorage.cart)
   console.log(localStorage.getItem('cart'))
   console.log(localStorage.cart)
+  
 
   items.forEach((element) => {
     total = total + element.qty * element.price
     var newDiv = document.createElement('div')
+    const lineBreak = document.createElement('br');
     newDiv.setAttribute('id', element.name)
     const name = document.createTextNode('Item: ' + element.name)
     const price = document.createElement('div')
@@ -44,6 +48,7 @@ function getitems() {
     qty.setAttribute('id', element.name + '-qty')
     qty.innerText = 'Qty: ' + element.qty
     var btndown = document.createElement('button')
+    newDiv.appendChild(lineBreak);
     btndown.innerHTML = '-'
     btndown.onclick = function () {
       if (element.qty > 0) {
