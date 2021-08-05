@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- This website template was created by: Pardeep Kaur C0812203, Karanpreet Kaur c799217
+         Gourav C0810482-->
+
+<html lang="en">
+<head>
+	
+	<title>Pardeep kaur, Gourav, and Karanpreet kaur</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+	#container{
+		width: 60%;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top: 10px;
+		height: auto;
+	}
+	
+	body{
+		background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.45),rgba(0,0,0,0.25),rgba(0,0,0,0))
+    ,url("image/9.jpg")no-repeat;
+    background-size: cover;
+	 }
+	
+	h2{
+		background-color:#403234;
+		border-radius: 1em;
+		list-style-type: none;
+		margin:0.5em;
+		padding: 1em;
+		color: #FFFFFF; 
+		text-align: center;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	   
+	   
+	}
+	
+	
+	/* main element selector style */
+	main{
+		/* display:block; */
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		font-size: 1.2em;
+		margin-top: 0.5em;
+		padding: 1em;
+		border-radius:1em;
+		background-color:#F7F3F5;
+		border-top: solid 0.2em #009933;
+		border-bottom: solid 0.2em #009933;
+		box-shadow:12px 12px 12px #000000;
+		margin: 3em 0em 5em 0em;
+	
+	}
+	
+	.radio{
+	  width: 100%;
+	  display: flex;
+	  padding: 1em;
+	}
+	
+	table {
+		border-collapse: collapse;
+		width: 50%;
+		margin-left: 5em;
+		height: auto;
+	  }
+	  
+	  th, td {
+		text-align: left;
+		padding: 8px;
+		
+		
+	  }
+	  input{
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+		padding: 1em;
+		/* width: 100%; */
+	  }
+	  input[type=text]{
+		width: 60%;
+	  }
+
+	  
+	  tr:nth-child(even)
+	  {background-color: #f2f2f2;
+		margin: 2em;}
+	  
+	  th {
+		background-color: #4CAF50;
+		color: white;
+	  }
+	  #submit{
+		  background-color:#009933;
+		  padding: 1em;
+		  color: white;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		  text-decoration: none;
+		  }
+	
+		  .footer {
+      text-align: center;
+      border: 1px solid black;
+      background-color: rgb(7, 7, 7);
+      color: beige;
+      margin-top: 0.5em;
+      width: 100%;
+       position: fixed;
+    }
+  
+    footer,
+    a {
+      color: rgb(182, 163, 59);
+    }
+</style>
+<script type="text/javascript">
+	function validate()
+	{
+	
+	alert("You have successfully submitted your order!");
+	window.location.replace("index.html");
+
+}
+	</script>
+</head>
+<body>
+
+	<div id="container">
+
+	<!-- Use the header area for the website name or logo -->
+	<header>
+		<h2>Place your order</h2>
+	</header>
+	
+	<!-- Use the main area to add the main content of the webpage -->
+	<main>
+	
+			<form name="myForm" onSubmit="return(validate());" action="index.html">
+				
+				<b>Full Name</b><br>
+				<input type="text" name="Name" placeholder="full name.."required /> <br>
+				
+				<b>E-Mail</b><br>
+				<input type="email" name="Email" placeholder="email.."required/> <br>
+				
+				<b>Phone no</b><br>
+				<input type="number" name="phoneno" placeholder="phone no.."required/>
+				<br>
+				<!-- <b>Which food would you like to order</b><br>
+					<input type="checkbox" id="Veg" name="Veg">
+			        <label for="Veg">Vegetarian</label> <br>
+					<input type="checkbox" id="Non-Veg" name="Non-Veg" >
+			        <label for="Non-Veg">Non-Vegetarian</label> <br>
+					<input type="checkbox" id="Side order " name="Side order" >
+			        <label for="side order">Side orders</label> <br>
+					<input type="checkbox" id="Drinks " name="Drinks" >
+			        <label for="Drinks">Drinks</label><br>  <br> --> 
+
+					<b>Which payment method would you like to order</b><br> <br>
+					<label for="Cash on delivery">Cash on delivery</label>
+					<input type="radio" name="service" id="Cash on delivery" value="Cash on delivery"><br>
+					<label for="Credit Card">Credit Card</label>
+					<input type="radio" name="service" id="Credit Card" value="Credit Card"><br>	
+					<input type="submit" id="submit" value="Submit your order">
+
+			</form>
+		
+	</main>
+</div>
+	<!-- Use the footer area to add webpage footer content -->
+	<footer class="footer">Slice of Heaven
+		&copy; Copyright 2021<br> Pardeep Kaur C0812203, Karanpreet Kaur c799217
+		Gourav C0810482. All Rights Reserved.<br>
+		<a href="mailto:myfavpizza@gmail.com">myfavpizza@gmail.com.com</a>
+	  </footer>
+	
+	
+</body>
+</html>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>

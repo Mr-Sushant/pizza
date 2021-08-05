@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- This website template was created by:Pardeep Kaur C0812203, Karanpreet Kaur c799217
+         Gourav C0810482-->
+
+<html lang="en">
+
+<head>	
+
+	<title>Pardeep kaur, Gourav, and Karanpreet kaur</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		#container {
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 0.5em;
+			height: auto;
+		}
+
+		body {
+			background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0)),
+			 url("image/men.jpeg")no-repeat;
+			background-size: cover;
+		}
+
+		/*nav li styles */
+		h2 {
+			background-color: #403234;
+			border-radius: 1em;
+			list-style-type: none;
+			margin: 0.5em;
+			padding: 1em;
+			color: #FFFFFF;
+			text-align: center;
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+		}
+
+		/* main element selector style */
+		main {
+			display: block;
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			font-size: 1.2em;
+			margin-top: 0.5em;
+			padding: 1.2em;
+			border-radius: 1em;
+			background-color: #F7F3F5;
+			border-top: solid 0.2em #009933;
+			border-bottom: solid 0.2em #009933;
+			box-shadow: 12% 12% 12% #000000;
+			margin: 3em 3em 3em 3em;
+
+		}
+
+		.radio {
+			width: 100%;
+			display: flex;
+			padding: 0.5em;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: 60%;
+			margin-left: 5em;
+			height: auto;
+		}
+
+		th,
+		td {
+			text-align: left;
+			padding: 0.4em;
+
+
+		}
+
+		input {
+			border: 0.1em solid #ccc;
+			border-radius: 1em;
+			box-sizing: border-box;
+			padding: 1em;
+			/* width: 100%; */
+		}
+
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+			margin: 1em;
+		}
+
+		th {
+			background-color: #4CAF50;
+			color: white;
+		}
+
+		#submit {
+			background-color: #009933;
+			padding: 0.5em;
+			color: white;
+			font-size: 1em;
+			margin: 0.3em 0.3em;
+			cursor: pointer;
+			text-decoration: none;
+		}
+
+		.footer {
+			font-size: 0.5em;
+			text-align: center;
+			margin-top: 0.1em;
+			color: white;
+			text-decoration: none;
+			padding: 0.5em;
+			border-radius: 0.5em;
+			background-color: #403234;
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			font-size: 1.2em;
+
+		}
+		input[type="text"]{
+			width:50%;
+		}
+	</style>
+	<script type="text/javascript">
+		function validate() {
+
+			alert("You have successfully submitted your Feedback!");
+		}
+	</script>
+</head>
+
+<body>
+
+	<div id="container">
+
+		<!-- Use the header area for the website name or logo -->
+		<header>
+			<h2>Feedback</h2>
+		</header>
+
+		<!-- Use the main area to add the main content of the webpage -->
+		<main>
+			<center>
+			<form name="myForm" onSubmit="return(validate());">
+				<b>Full Name</b><br>
+				<input type="text" name="Name" placeholder="full name.." required /><br><br>
+				<b>E-Mail</b><br>
+				<input type="email" name="Email" placeholder="email.." required /><br><br>
+				<b>Phone no</b><br>
+				<input type="number" name="phoneno" placeholder="phone no.." required /><br><br>
+				<b>Comments</b><br>
+				<input type="text" rows="5" cols="50" name="comments" placeholder="comments.." required /><br><br>
+				<input type="submit" id="submit" value="Submit your Feedback">
+			</form>
+		</center>
+
+		</main>
+
+		<!--Use the footer area to add webpage footer content-->
+
+		<footer class="footer">Slice of Heaven
+			&copy; Copyright 2021<br> Pardeep Kaur C0812203, Karanpreet Kaur c799217
+			Gourav C0810482. All Rights Reserved.<br>
+			<a href="mailto:myfavpizza@gmail.com">myfavpizza@gmail.com.com</a>
+	</div>
+</body>
+
+</html>
+
+<script>
+	function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
+</script>

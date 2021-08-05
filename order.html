@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- This website template was created by:Pardeep Kaur C0812203, Karanpreet Kaur c799217
+         Gourav C0810482-->
+
+<head>
+  <title>Pardeep kaur, Gourav, and Karanpreet kaur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="utf-8">
+</head>
+<Style>
+ body {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25),
+     rgba(0, 0, 0, 0)), url("image/10.jpg")no-repeat;
+    background-size: cover;
+    color: black;
+ }
+
+  .reserve form,
+  input[type="button"] {
+    background-color: rgb(228, 236, 149);
+    color: rgb(12, 11, 11);
+    padding: 0.1em;
+    margin-left:15em;
+    margin-right:5em;
+    margin-top:3em;
+    text-align: center;
+    font-size:2.0em;
+    font-weight: bold;
+  }
+
+  .video {
+    position: absolute;
+    margin: auto;
+    margin-top: 4em;
+    margin-left: 5em;
+  }
+
+  marquee{
+    margin-top:2em
+  }
+  .footer {
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgb(7, 7, 7);
+    margin-top: 31em;
+    color: white;
+  }
+
+  .footer,
+  a {
+    color: rgb(182, 163, 59);
+  }
+</Style>
+
+<body>
+  <!-- Use the nav area to add hyperlinks to other pages within the website -->
+  <header>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About us</a>
+      <a href="menu.html">Menu</a>
+      <a href="order.html" class="active">Online orders</a>
+      <a href="contact.html">Contact us</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Use the main area to add the main content of the webpage -->
+  <marquee direction="left" height="80px">
+    <i style="font-family:chiller; color:rgb(222, 245, 160); font-size: 2.8em">Online delivery timing From 5:30 AM to
+      8:30 PM.  On Wednesday, get a complementary sprite with every meal!!..</i>
+  </marquee>
+  <div class="center">
+    <form action="" method="post">
+      <a href="menu.html"><input type="button" value="Place your order here !!.."></a>
+    </form>
+  </div>
+  <div class="video">
+
+    <video width="230" height="230" controls>
+      <source src="MEDIA/soya.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video width="230" height="220" controls>
+      <source src="MEDIA/chicken.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video width="230" height="220" controls>
+      <source src="MEDIA/karri.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video width="230" height="220" controls>
+      <source src="MEDIA/prantha.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <video width="230" height="230" controls>
+      <source src="MEDIA/paneer.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Use the footer area to add webpage footer content -->
+  <footer class="footer">Slice of Heaven
+    &copy; Copyright 2021<br> Pardeep Kaur C0812203, Karanpreet Kaur c799217
+    Gourav C0810482. All Rights Reserved.<br>
+    <a href="mailto:myfavpizza@gmail.com">myfavpizza@gmail.com.com</a>
+  </footer>  
+</body>
+</html>
+
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>

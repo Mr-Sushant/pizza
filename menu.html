@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- This website template was created by: Pardeep Kaur C0812203, Karanpreet Kaur c799217
+         Gourav C0810482-->
+
+<head>
+  <title>Pardeep kaur, Gourav, and Karanpreet kaur</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+</head>
+<Style>
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25),
+     rgba(0, 0, 0, 0)), url("image/13.jpg")no-repeat;
+    background-size: cover;
+    color: black;
+    height: 110%;
+  }
+  table {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+    opacity: 70%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    height:80%;
+  }
+
+  th {
+    width: 12.5%;
+    border: none;
+    background-color: #f1cab5;
+    height: 40px;
+
+  }
+
+  td {
+    width: 12.5%;
+    border: none;
+    text-align: center;
+    padding: 10px;
+    background-color: #e3e3e3;
+  }
+
+  .footer {
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgb(7, 7, 7);
+    color: beige;
+    margin-top: 0.5em;
+    width: 100%;
+     position: fixed;
+  }
+
+  footer,
+  a {
+    color: rgb(182, 163, 59);
+  }
+  .btn{
+    width:200px;
+    height:50px;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+  }
+</Style>
+
+<body>
+  <!-- Use the nav area to add hyperlinks to other pages within the website -->
+  <header>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About us</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="order.html">Online orders</a>
+      <a href="contact.html">Contact us</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+    </div>
+  </header>
+
+  <!-- Use the main area to add the main content of the webpage -->
+  <main>
+
+    <table class="table">
+      <table>
+
+        <tr>
+          <th>VEGETARIAN </th>
+          <td>PRICE</td>   
+          <td></td>
+          <th>NON-VEGETARIAN</th>
+          <td>PRICE</td>
+          <td></td>
+          <th>SIDE ORDERS</th>
+          <td>PRICE</td>
+          <td></td>
+          <th>DRINKS</th>
+          <td>PRICE</td>
+          <td></td>
+
+<!--additem(name, price)-->
+        </tr>
+        <tr>
+          <td>Golden Corn Pizza</td>
+          <td>$10</td>       
+          <td><input type="checkbox" name="name2" onchange="additem('Golden Corn Pizza', 10)" /></td>   
+          <td>Non-veg Supreme Pizza </td>
+          <td>$12</td>
+          <td><input type="checkbox" name="name3" onchange="additem('Non-veg Supreme Pizza', 12)" /></td>   
+          <td>Onion Rings</td>
+          <td>$5</td>
+          <td><input type="checkbox" name="name2" onchange="additem('Onion Rings', 5)" /></td>   
+          <td>Coca-cola </td>
+          <td>$2 </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Coca-cola', 2)"/></td>   
+
+        </tr>
+        <tr>
+          <td>Farmhouse Pizza </td>
+          <td>$10</td>
+          <td><input type="checkbox" name="name2" onchange="additem('Farmhouse Pizza', 10)" /></td>   
+          <td>Chicken Fiesta Pizza</td>
+          <td>$15 </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Chicken Fiesta Pizza', 15)" /></td>   
+          <td>chicken wings</td>
+          <td>$8</td>
+          <td><input type="checkbox" name="name2" onchange="additem('Chicken Wings', 8)"/></td>   
+          <td>Diet Coke</td>
+          <td>$4 </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Diet Coke', 4)"/></td>   
+        </tr>
+        <tr>
+          <td>Spicy Triple Tango</td>
+          <td>$10</td>
+          <td><input type="checkbox" name="name2" onchange="additem('Spicy Triple Tango', 10)"/></td>   
+          <td>Chicken Golden Delight</td>
+          <td>$13</td>
+          <td><input type="checkbox" name="name2" onchange="additem('Chicken Golden Delight', 13)"/></td>   
+          <td>Chicken fries</td>
+          <td>$7 </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Chicken Fries', 7)"/></td>   
+          <td>Cold Coffee</td>
+          <td>$5 </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Cold Coffee', 5)"/></td>   
+        </tr>
+        <tr>
+          <td>Crisp Capsicum with Tomato Pizza</td>
+          <td>$15 </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Crisp Capsicum with Tomato Pizza', 15)"/></td>   
+          <td>Chicken dominator</td>
+          <td>$14 </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Chicken Dominator', 14)"/></td>   
+          <td>Potato Fries</td>
+          <td>$8</td>
+          <td><input type="checkbox" name="name2" onchange="additem('Potato Fries', 8)"/></td>   
+          <td>Chocolate Shake</td>
+          <td>$5</td>
+          <td><input type="checkbox" name="name2" onchange="additem('Chocolate Shake', 5)"/></td>   
+        </tr>
+
+        </tr>
+        <tr>
+          <td>Jalapeno & Red Paprika Pizza</td>
+          <td>$12 </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Jalapeno & Red Paprika Pizza', 12)"/></td>   
+          <td>Tandoori Chicken Pizza</td>
+          <td>$12 </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Tandoori Chicken Pizza', 12)"/></td>   
+          <td>Garlic Bread</td>
+          <td>$4 </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Garlic Bread', 4)"/></td>   
+          <td>Sprite</td>
+          <td>$2 </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Sprite', 2)"/></td>   
+        </tr>
+
+        <tr>
+          <td>Paneer Special Pizza</td>
+          <td>$15 </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Paneer Spceial Pizza', 15)"/></td>   
+          <td>Indi Chicken Tikka Pizza</td>
+          <td>$10</td>
+          <td><input type="checkbox" name="name2" onchange="additem('Indi Chicken Tikka Pizza', 10)"/></td>   
+          <td>Oven Baked Fish</td>
+          <td>$8 </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Oven Baked Fish', 8)"/></td>   
+          <td>Majito</td>
+          <td>$2</td>
+          <td><input type="checkbox" name="name2" onchange="additem('Majito', 2)"/></td>   
+        </tr>
+        <tr>
+          <td>Margherita Pizza</td>
+          <td>$7 </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Margherita Pizza', 7)"/></td>   
+          <td>Chicken Sausage Pizza</td>
+          <td>$10 </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Chicken Sausage Pizza', 10)"/></td>   
+          <td>Egg Role</td>
+          <td>$14  </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Egg Role', 14)"/></td>   
+          <td>Apple Juice</td>
+          <td>$2  </td>
+          <td><input type="checkbox" name="name2" onchange="additem('Apple Juice', 2)"/></td>   
+        </tr>
+      </table>
+      <div>
+      <center>
+        <a href="cart.html"><input type="submit" class="btn" value="View cart"></a>
+        <a href="onlineorder.html"><input type="submit" class="btn" value="Place Order"></a>
+        <a href="choice.html"><input type="submit" class="btn" value="Pizza of your choice"></a>
+      </center>
+      </div>
+  </main>
+<br><br><br>
+
+  <!-- Use the footer area to add webpage footer content -->
+  <footer class="footer">Slice of Heaven
+    &copy; Copyright 2021<br> Pardeep Kaur C0812203, Karanpreet Kaur c799217
+    Gourav C0810482. All Rights Reserved.<br>
+    <a href="mailto:myfavpizza@gmail.com">myfavpizza@gmail.com.com</a>
+  </footer>
+
+</body>
+
+</html>
+<script src="orders.js"></script>
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>

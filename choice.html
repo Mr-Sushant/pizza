@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- This website template was created by: Pardeep Kaur C0812203, Karanpreet Kaur c799217
+         Gourav C0810482-->
+
+<head>
+  <title>Pardeep kaur, Gourav, and Karanpreet kaur</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+</head>
+
+<Style>
+	body{
+		background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.45),rgba(0,0,0,0.25),rgba(0,0,0,0))
+    ,url("image/9.jpg")no-repeat;
+    background-size: cover;
+	 }
+     #container{
+		width: 60%;
+		margin-left:auto;
+		margin-right:auto;
+		height: auto;
+	}
+
+    /* main element selector style */
+    main{
+        width: 60%;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top: 100px;
+		height: auto; 
+    }
+	
+     h2{
+		background-color:#403234;
+		border-radius: 1em;
+		list-style-type: none;
+		margin:0.5em;
+		padding: 1em;
+		color: #FFFFFF; 
+		text-align: center;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	   
+	   
+	}
+    main{
+        margin-top: 10em;;
+    }
+    
+  
+    .footer {
+      text-align: center;
+      border: 1px solid black;
+      background-color: rgb(7, 7, 7);
+      color: beige;
+      margin-top: 0.5em;
+      width: 100%;
+       position: fixed;
+    }
+  
+    footer,
+    a {
+      color: rgb(182, 163, 59);
+    }
+    .btn{
+      width:100px;
+      height:50px;
+      background-color: #e3e3e3;
+      border-radius: 10px;
+    }
+  </Style>
+  
+  <body>
+
+
+    <h2>Prepare pizza of your choice</h2>
+    <main>
+    <div id="recipe-form">
+        <h3>ADD Ingredients to Your Pantry</h3>
+        <form id="add-an-ingredient">
+            <label for="ingredient-name">Ingredient:</label>
+            <input type="text" id="ingredient-name" placeholder="ingredient name">
+            <input type="submit" id="submit" value="Add">
+            <input type="button" id="remove" value="Remove">
+        </form>
+    </div>
+
+    <div>
+        <h3> MY Ingredients</h3>
+        <ul id="pantry" class="list-group">
+            <li id='PASTA' class="list-group-item">PASTA</li>
+            <li id='GINGER' class="list-group-item">GINGER</li>
+            <li id='GARLIC' class="list-group-item">GARLIC</li>
+        </ul>
+    </div>
+    <h3>ADD a new Recipe</h3>
+    <label for="recipe-name">Recipe Name:</label>
+    <input type="text" id="recipe-name" placeholder="Recipe Name" value="">
+    <input type="button" id="write-recipe" value="Write Recipe">
+    <input type="button" id="remove-recipe" value="Remove Recipe">
+    <h3>SELECT Indgredient from your Pantry </h3>
+    <div id="list-ingred">
+    </div>
+    <div id="how-to">
+        <h3>HOW to prepare</h3>
+    </div>
+</main>
+
+  <!-- Use the footer area to add webpage footer content -->
+  <footer class="footer">Slice of Heaven
+    &copy; Copyright 2021<br> Pardeep Kaur C0812203, Karanpreet Kaur c799217
+    Gourav C0810482. All Rights Reserved.<br>
+    <a href="mailto:myfavpizza@gmail.com">myfavpizza@gmail.com.com</a>
+  </footer>
+
+</body>
+</html>
+<script>
+
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
+
+  document.addEventListener('DOMContentLoaded', function(event) {
+    console.log("hey this is from group 8")
+});
+let ingredientForm = document.getElementById('recipe-form');
+console.log(ingredientForm);
+ingredientForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    let ingredientName = document.getElementById('ingredient-name').value;
+    console.log(ingredientName);
+    document.getElementById('ingredient-name').value = '';
+    let myIngredient = document.createElement('li');
+    myIngredient.setAttribute('id', ingredientName)
+    let newIngredient = document.createTextNode(ingredientName);
+    console.log(myIngredient);
+    myIngredient.appendChild(newIngredient);
+    document.getElementById('pantry').appendChild(myIngredient);
+
+});
+let btnIngredient = document.getElementById('remove');
+console.log(btnIngredient);
+btnIngredient.addEventListener('click', (event) => {
+    event.preventDefault();
+    let ingredientName = document.getElementById('ingredient-name').value;
+    console.log(ingredientName);
+    document.getElementById('ingredient-name').value = '';
+
+    document.getElementById('pantry').removeChild(document.getElementById(ingredientName));
+
+});
+
+
+let btnRecipe = document.getElementById('write-recipe');
+console.log(btnRecipe);
+btnRecipe.addEventListener('click', (event) => {
+    var inputTA = document.createElement('textarea');
+    var saveRecipe = document.createElement('input');
+    saveRecipe.setAttribute('type', 'button');
+    saveRecipe.setAttribute('name', 'saveRecipe');
+    saveRecipe.setAttribute('id', 'saveRecipe');
+    saveRecipe.setAttribute('value', 'Save Recipe');
+    saveRecipe.setAttribute('onClick', 'hideArea()');
+
+    var lineBreak = document.createElement('br');
+    console.log(saveRecipe);
+
+    inputTA.setAttribute('name', 'post');
+    inputTA.setAttribute('id', 'postRecipe');
+    inputTA.setAttribute('maxlength', 5000);
+    inputTA.setAttribute('cols', 80);
+    inputTA.setAttribute('rows', 10);
+
+    let howTo = document.getElementById('how-to');
+    howTo.appendChild(inputTA);
+    saveRecipe.innerHTML = "Save Recipe";
+
+    howTo.appendChild(lineBreak);
+    howTo.appendChild(saveRecipe);
+
+
+
+
+});
+
+function hideArea() {
+    var recipieText = document.getElementById('postRecipe').value;
+    document.getElementById('how-to').removeChild(document.getElementById('saveRecipe'));
+    document.getElementById('how-to').removeChild(document.getElementById('postRecipe'));
+    var heading = document.createElement('h3');
+    heading.innerHTML = document.getElementById('recipe-name').value;
+    heading.setAttribute('id', 'heading-' + document.getElementById('recipe-name').value);
+    var savedRecipe = document.createElement('p');
+    savedRecipe.setAttribute('name', 'savedRecipe');
+    savedRecipe.setAttribute('id', 'savedRecipe-' + document.getElementById('recipe-name').value);
+    savedRecipe.innerHTML = recipieText;
+    document.getElementById('how-to').appendChild(heading);
+    document.getElementById('how-to').appendChild(savedRecipe);
+}
+
+let btnremRecipe = document.getElementById('remove-recipe');
+console.log(btnremRecipe);
+btnremRecipe.addEventListener('click', (event) => {
+    document.getElementById('how-to').removeChild(document.getElementById('heading-' + document.getElementById('recipe-name').value));
+    document.getElementById('how-to').removeChild(document.getElementById('savedRecipe-' + document.getElementById('recipe-name').value));
+    document.getElementById('recipe-name').value = '';
+});
+</script>

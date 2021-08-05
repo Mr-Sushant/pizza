@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <style>
+      body {
+        background: url('image/14.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        /* height: 120%;   */
+      }
+
+      .topnav {
+        overflow: hidden;
+        color: rgb(240, 238, 236);
+        float: right;
+        margin-right: 5em;
+      }
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .topnav a:hover {
+        background-color: rgb(103, 110, 116);
+        color: black;
+      }
+
+      .topnav a.active {
+        background-color: rgb(95, 129, 151);
+        color: white;
+      }
+
+      .topnav .icon {
+        display: none;
+      }
+    </style>
+  </head>
+  <body onload="getitems()">
+    <header>
+      <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About us</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Online orders</a>
+        <a href="register.html">Register</a>
+        <a href="contact.html">Contact us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </header>
+    <div>
+      <p>cart items</p>
+      <div id="cart"></div>
+    </div>
+    <div>
+      <p id="total">total =</p>
+    </div>
+  </body>
+</html>
+<script src="orders.js"></script>

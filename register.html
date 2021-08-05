@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Register Form created by: 
+        Karanpreet Kaur, Student ID- C0799217, Term- 02, Group- 02 -->
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>Pardeep kaur, Gourav, and Karanpreet kaur</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+		
+	</head>
+    <style>
+#container {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin: 0 auto;
+    width: 800px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    
+ 
+}
+
+#button{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+
+}
+
+label {
+	float: left;
+    width: 11em;
+    text-align: right;
+}
+
+input{
+    width: 14em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: .5em;
+}
+
+#submit, #reset {
+    width: 140px;
+    height: 30px;
+    margin-top: 25px;
+    border-radius: 8px;
+    border: none;
+    background-color:rgb(175, 170, 160);
+    color: black; 
+    font-size: 20px;
+    text-align: center;
+    
+}
+
+label.error {
+	float: none;
+	color: red;
+	font-size: 87.5%;
+}
+</style>>	
+	<body>
+		<div id="container">
+			<h1>Register with us</h1>
+			<form name="register_form" id="register_form">				
+					<label for="email">Email Address:</label>
+					<input type="text" name="email" id="email" autofocus placeholder="abc@gmail.com"><br>
+					<label for="retype">Re-enter Email Address:</label>
+					<input type="text" name="retype" id="retype" autofocus placeholder="abc@gmail.com"><br>
+					<label for="first_name">First Name:</label>
+					<input type="text" name="first_name" id="first_name"><br>
+					<label for="last_name">Last Name:</label>
+					<input type="text" name="last_name" id="last_name"><br>
+					<label for="state">2-Character State Code:</label>
+					<input type="text" name="state" id="state" placeholder="2-character code"><br>
+					<label for="zip">5-Digit ZIP Code:</label>
+					<input type="text" name="zip" id="zip" placeholder="99999 or 99999-9999"><br>
+
+					<div id="button">
+					<input type="submit" id="submit" value="Join our list">
+					<input type="reset" id="reset" value="Reset"><br>
+					</div>
+			</form>
+		</div>
+	</body>
+    <script>
+    /* Register Form created by: 
+        Karanpreet Kaur, Student ID- C0799217, Term- 02, Group- 02 */
+$(document).ready(function() {
+	jQuery.validator.addMethod("charactersonly", function(value, element) {
+		return this.optional(element) || /^[a-z\s]+$/i.test(value);
+		}, "Enter only alphabetical characters");
+	$("#email").focus();
+    $("#register_form").validate({
+		rules: {
+			email: {
+				required: true,
+				email: true
+			},
+			
+			retype: {
+				required: true,
+				equalTo: "#email"
+			},
+			first_name: {
+				required: true,
+				charactersonly: true
+			},
+			last_name: {
+				required: true,
+				charactersonly: true
+			},
+			state: {
+				required: true,
+				rangelength: [2, 2],
+				charactersonly: true
+			},
+			zip: {
+				required: true,
+				rangelength: [5, 5]
+			}
+		}		
+	}); // end validate
+}); // end ready
+</script>
+</html>

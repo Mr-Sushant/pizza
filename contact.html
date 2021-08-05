@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- This website template was created by: Pardeep Kaur C0812203, Karanpreet Kaur c799217
+         Gourav C0810482-->
+
+<head>
+    <title>Pardeep kaur, Gourav, and Karanpreet kaur</title> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+
+<Style>
+    body {
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25),
+       rgba(0, 0, 0, 0)), url("image/1223.jpg")no-repeat;
+      background-size: cover;
+      color: black;
+    }
+
+   main{
+   float:right;
+   font-size: 1.1em;
+   margin-top: 0.3em;   
+   width:100%;
+   margin-left:5em;          
+   }
+
+   .desktop{
+       margin-left:2em;
+   }
+
+    .footer {
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgb(7, 7, 7);
+    color: beige;
+    margin-top: 0.3em;
+  }
+
+  footer,
+  a {
+    color: rgb(182, 163, 59);
+  }
+
+  form {
+      font-size: 2.0em;
+  }
+</style>
+<body>
+    <header>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="menu.html">Menu</a>
+            <a href="order.html">Online orders</a>
+            <a href="contact.html" class="active">Contact us</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Use the main area to add the main content of the webpage -->
+    <main>
+        <div class="desktop">
+            <h1 style="font-family: chiller; font-size: 2.0em;color:white">A food for you, no matter wherever you are.!!</h1>
+
+            <h2 style="font-size:1.6em;color:white">We are located at:</h2>
+            <p style="font-size: 1.2em;color:white">126 crystalview Brampton<br>
+                Mississuaga, Canada</p>
+            <div class="mobile">
+                <h3 style="font-size: 1.0em;color:white"><u>OPENING HOURS</u></h3>
+                <p style="font-size: 1.0em;color:white">7:00 AM - 12 PM (7 Days A Week)</p>
+                <div class="color">
+                    <h3 style="font-size:1.2em;color:white"">Feel free to call us</h3>
+                    <a href="tel:(416) 879-8797"> (416) 879-8797</a>
+
+                    <h4 style="font-size: 1.2em ;color:white">Email Address</h4>
+                    <a href="mailto:kitchenrecipes@gmail.com">kitchenrecipes@gmail.com</a>
+                </div><br><br>
+                <form action="" method="post">
+                    <a href="feedbackform1.html"><input type="button" value="Feedback"></a>
+                </form>
+            </div>
+    </main>
+
+    <!-- Use the footer area to add webpage footer content -->
+    <footer class="footer">Slice of Heaven
+        &copy; Copyright 2021<br> Pardeep Kaur C0812203, Karanpreet Kaur c799217
+        Gourav C0810482. All Rights Reserved.<br>
+        <a href="mailto:myfavpizza@gmail.com">myfavpizza@gmail.com.com</a>
+    </footer>
+
+</body>
+
+</html>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
